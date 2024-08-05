@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#084D93"
+    android:id="@+id/main">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00A3FD"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_arrow_back_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Task"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Name:"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/taskInput"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/white"
+        android:hint="Enter the task"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="3dp"
+        android:src="@drawable/baseline_audiotrack_24"
+        android:layout_toRightOf="@id/taskInput"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/mike2"
+
+        />
+
+    <TextView
+        android:id="@+id/dueDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due date:"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/taskInput"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Due date picker -->
+    <EditText
+        android:id="@+id/Date"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dueDateLabel"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:hint="Enter Date"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/editDate"
+        android:layout_marginLeft="3dp"
+
+        android:src="@drawable/baseline_calendar_month_24"
+        android:layout_toRightOf="@+id/Date"
+        android:layout_below="@+id/mike2"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due Time:"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/Date"
+        android:layout_marginBottom="8dp" />
+    <EditText
+        android:id="@+id/Time"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:hint="Enter Time"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/editTime"
+        android:src="@drawable/baseline_access_alarm_24"
+        android:layout_toRightOf="@+id/Time"
+        android:layout_below="@+id/editDate"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="3dp"
+
+        />
+    <TextView
+        android:id="@+id/repeatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/Time"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/repeatSpinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repeatLabel"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:minHeight="48dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/addToListLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to List"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/repeatSpinner"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/addToListSpinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addToListLabel"
+        android:background="@android:color/white"
+        android:minHeight="48dp"
+         />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/baseline_done_24"
+       android:contentDescription="Save Data"
+        android:focusableInTouchMode="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="92dp"
+    android:padding="16dp"
+    android:background="#79BBD2"
+    android:id="@+id/main"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="10dp">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="310dp"
+        android:layout_height="25dp"
+        android:gravity="start"
+        android:text="Task"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_delete_forever_24"
+        android:layout_toRightOf="@id/checkBox"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="3dp"
+        android:id="@+id/delete"
+
+        />
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox"
+        android:layout_marginLeft="33dp"
+        android:text="Date"
+        android:textSize="13dp"
+        tools:ignore="TextSizeCheck"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/comma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox"
+        android:layout_toRightOf="@+id/date"
+        android:text=" , "
+        android:textSize="13dp"
+        tools:ignore="TextSizeCheck"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox"
+        android:layout_toRightOf="@+id/comma"
+        android:text="Time "
+        android:textSize="13dp"
+        tools:ignore="TextSizeCheck"
+        android:textColor="@color/white"
+        />
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/baseline_sync_24"
+        android:layout_below="@+id/checkBox"
+        android:layout_toRightOf="@id/time"
+        android:layout_marginTop="3dp"
+        android:id="@+id/image"
+
+        />
+
+    <TextView
+        android:id="@+id/repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_marginLeft="33dp"
+        android:text="Reapeatition of the task"
+        android:textSize="13dp"
+        tools:ignore="TextSizeCheck"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_toRightOf="@+id/repeat"
+        android:text=" , "
+        android:textSize="13dp"
+        tools:ignore="TextSizeCheck"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_toRightOf="@+id/com"
+        android:text="List"
+        android:textSize="13dp"
+        tools:ignore="TextSizeCheck"
+        android:textColor="@color/white"
+        />
+
+</RelativeLayout>
